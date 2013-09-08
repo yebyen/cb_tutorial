@@ -2,3 +2,6 @@
 -compile(export_all).
 hello('GET', []) ->
   {ok, [{greeting, "Hello, world!"}]}.
+list('GET', []) ->
+  Greetings = boss_db:find(greeting, []),
+  {ok, [{greetings, Greetings}]}.
