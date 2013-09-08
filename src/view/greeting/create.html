@@ -1,0 +1,11 @@
+{% extends "greeting/list.html" %}
+{% block title %}A new greeting!{% endblock %}
+
+{% block body %}
+<form method="post">
+Enter a new greeting:
+<textarea name="greeting_text"></textarea>
+<input type="submit">
+</form>
+{% endblock %}
+{% endblock %}

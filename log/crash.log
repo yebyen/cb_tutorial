@@ -1,0 +1,784 @@
+2013-09-08 23:10:25 =SUPERVISOR REPORT====
+     Supervisor: {<0.97.0>,poolboy_sup}
+     Context:    shutdown_error
+     Reason:     shutdown
+     Offender:   [{nb_children,20},{name,boss_session_controller},{mfargs,{boss_session_controller,start_link,[[{size,20},{max_overflow,40},{adapter,boss_session_adapter_mock},{session_exp_time,525600},{session_key,"_boss_session"}]]}},{restart_type,temporary},{shutdown,brutal_kill},{child_type,worker}]
+
+2013-09-08 23:16:00 =ERROR REPORT====
+** Generic server boss_web terminating 
+** Last message in was timeout
+** When Server state == {state,[],<0.132.0>,{ok,<0.133.0>},undefined,true}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:00 =CRASH REPORT====
+  crasher:
+    initial call: boss_web_controller:init/1
+    pid: <0.67.0>
+    registered_name: boss_web
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_sup,<0.65.0>]
+    messages: []
+    links: [<0.128.0>,<0.150.0>,<0.153.0>,<0.132.0>,<0.93.0>,<0.118.0>,<0.126.0>,<0.95.0>,<0.83.0>,<0.85.0>,<0.66.0>]
+    dictionary: [{random_seed,{21146,24633,12399}},{boss_environment,development}]
+    trap_exit: false
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 194312
+  neighbours:
+2013-09-08 23:16:00 =SUPERVISOR REPORT====
+     Supervisor: {local,boss_sup}
+     Context:    child_terminated
+     Reason:     {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+     Offender:   [{pid,<0.67.0>},{name,boss_web_controller},{mfargs,{boss_web_controller,start_link,[[{ip,"0.0.0.0"},{port,8001}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2013-09-08 23:16:00 =ERROR REPORT====
+** Generic server boss_service_sup terminating 
+** Last message in was {'EXIT',<0.67.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{global,boss_service_sup},one_for_all,[],undefined,10,10,[],boss_service_sup,[]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:00 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_service_sup/1
+    pid: <0.132.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 212
+  neighbours:
+2013-09-08 23:16:00 =ERROR REPORT====
+** Generic server boss_db_sup terminating 
+** Last message in was {'EXIT',<0.67.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{local,boss_db_sup},one_for_one,[{child,<0.86.0>,db_controller,{poolboy,start_link,[[{name,{local,boss_db_pool}},{worker_module,boss_db_controller},{size,5},{max_overflow,10},{adapter,mock},{cache_enable,false},{shards,[]},{is_master_node,true},{db_host,"localhost"},{db_port,1978}]]},permanent,2000,worker,[poolboy]}],undefined,10,10,[],boss_db_sup,[{adapter,mock},{cache_enable,false},{shards,[]},{is_master_node,true},{db_host,"localhost"},{db_port,1978}]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:00 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_db_sup/1
+    pid: <0.85.0>
+    registered_name: boss_db_sup
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 290
+  neighbours:
+2013-09-08 23:16:00 =ERROR REPORT====
+** Generic server boss_db_mock_sup terminating 
+** Last message in was {'EXIT',<0.67.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{global,boss_db_mock_sup},one_for_one,[{child,<0.84.0>,db_mock_controller,{boss_db_mock_controller,start_link,[[]]},permanent,2000,worker,[boss_db_mock_controller]}],undefined,10,10,[],boss_db_mock_sup,[]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:01 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_db_mock_sup/1
+    pid: <0.83.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 295
+  neighbours:
+2013-09-08 23:16:01 =ERROR REPORT====
+** Generic server boss_session_sup terminating 
+** Last message in was {'EXIT',<0.67.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{local,boss_session_sup},one_for_one,[{child,<0.96.0>,session_controller,{poolboy,start_link,[[{name,{local,boss_session_pool}},{worker_module,boss_session_controller},{size,20},{max_overflow,40},{adapter,boss_session_adapter_mock},{session_exp_time,525600},{session_key,"_boss_session"}]]},permanent,2000,worker,[poolboy]}],undefined,10,10,[],boss_session_sup,[{adapter,boss_session_adapter_mock},{session_exp_time,525600},{session_key,"_boss_session"}]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:01 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_session_sup/1
+    pid: <0.95.0>
+    registered_name: boss_session_sup
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 286
+  neighbours:
+2013-09-08 23:16:01 =ERROR REPORT====
+** Generic server boss_news_sup terminating 
+** Last message in was {'EXIT',<0.67.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{global,boss_news_sup},one_for_one,[{child,<0.127.0>,news_controller,{boss_news_controller,start_link,[[]]},permanent,2000,worker,[boss_news_controller]}],undefined,10,10,[],boss_news_sup,[]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:01 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_news_sup/1
+    pid: <0.126.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 311
+  neighbours:
+2013-09-08 23:16:01 =ERROR REPORT====
+** Generic server boss_mq_sup terminating 
+** Last message in was {'EXIT',<0.67.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{global,boss_mq_sup},one_for_one,[{child,<0.119.0>,mq_controller,{boss_mq_controller,start_link,[[{adapter,boss_mq_adapter_tinymq}]]},permanent,2000,worker,[boss_mq_controller]}],undefined,10,10,[],boss_mq_sup,[{adapter,boss_mq_adapter_tinymq}]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:01 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_mq_sup/1
+    pid: <0.118.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 325
+  neighbours:
+2013-09-08 23:16:01 =ERROR REPORT====
+** Generic server boss_session_mock_sup terminating 
+** Last message in was {'EXIT',<0.67.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{global,boss_session_mock_sup},one_for_one,[{child,<0.94.0>,session_mock_controller,{boss_session_mock_controller,start_link,[[]]},permanent,2000,worker,[boss_session_mock_controller]}],undefined,10,10,[],boss_session_mock_sup,[]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:01 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_session_mock_sup/1
+    pid: <0.93.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 327
+  neighbours:
+2013-09-08 23:16:01 =ERROR REPORT====
+** Generic server <0.153.0> terminating 
+** Last message in was {'EXIT',<0.67.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{<0.153.0>,boss_translator_sup},one_for_one,[{child,<0.154.0>,translator_controller,{boss_translator_controller,start_link,[[{application,cb_tutorial}]]},permanent,2000,worker,[boss_translator_controller]}],undefined,10,10,[],boss_translator_sup,[{application,cb_tutorial}]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:01 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_translator_sup/1
+    pid: <0.153.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 337
+  neighbours:
+2013-09-08 23:16:01 =ERROR REPORT====
+** Generic server <0.150.0> terminating 
+** Last message in was {'EXIT',<0.67.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{<0.150.0>,boss_router_sup},one_for_one,[{child,<0.151.0>,router_controller,{boss_router_controller,start_link,[[{application,cb_tutorial},{controllers,["cb_tutorial_greeting_controller"]}]]},permanent,2000,worker,[boss_router_controller]}],undefined,10,10,[],boss_router_sup,[{application,cb_tutorial},{controllers,["cb_tutorial_greeting_controller"]}]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:01 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_router_sup/1
+    pid: <0.150.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 343
+  neighbours:
+2013-09-08 23:16:01 =ERROR REPORT====
+** Generic server boss_mail_sup terminating 
+** Last message in was {'EXIT',<0.67.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{local,boss_mail_sup},one_for_one,[{child,<0.129.0>,mail_controller,{boss_mail_controller,start_link,[[{driver,boss_mail_driver_smtp}]]},permanent,2000,worker,[boss_mail_controller]}],undefined,10,10,[],boss_mail_sup,[{driver,boss_mail_driver_smtp}]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:01 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_mail_sup/1
+    pid: <0.128.0>
+    registered_name: boss_mail_sup
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 346
+  neighbours:
+2013-09-08 23:16:01 =SUPERVISOR REPORT====
+     Supervisor: {<0.97.0>,poolboy_sup}
+     Context:    shutdown_error
+     Reason:     shutdown
+     Offender:   [{nb_children,20},{name,boss_session_controller},{mfargs,{boss_session_controller,start_link,[[{size,20},{max_overflow,40},{adapter,boss_session_adapter_mock},{session_exp_time,525600},{session_key,"_boss_session"}]]}},{restart_type,temporary},{shutdown,brutal_kill},{child_type,worker}]
+
+2013-09-08 23:16:01 =ERROR REPORT====
+** Generic server boss_web terminating 
+** Last message in was timeout
+** When Server state == {state,[],<0.206.0>,{ok,<0.207.0>},undefined,true}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:01 =CRASH REPORT====
+  crasher:
+    initial call: boss_web_controller:init/1
+    pid: <0.163.0>
+    registered_name: boss_web
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_sup,<0.65.0>]
+    messages: [{'$gen_call',{<0.208.0>,#Ref<0.0.0.1083>},get_all_applications}]
+    links: [<0.204.0>,<0.224.0>,<0.227.0>,<0.206.0>,<0.175.0>,<0.200.0>,<0.202.0>,<0.177.0>,<0.165.0>,<0.167.0>,<0.66.0>]
+    dictionary: [{random_seed,{21146,24633,12399}},{boss_environment,development}]
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 173786
+  neighbours:
+2013-09-08 23:16:01 =SUPERVISOR REPORT====
+     Supervisor: {local,boss_sup}
+     Context:    child_terminated
+     Reason:     {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+     Offender:   [{pid,<0.163.0>},{name,boss_web_controller},{mfargs,{boss_web_controller,start_link,[[{ip,"0.0.0.0"},{port,8001}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2013-09-08 23:16:01 =ERROR REPORT====
+** Generic server boss_service_sup terminating 
+** Last message in was {'EXIT',<0.163.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{global,boss_service_sup},one_for_all,[],undefined,10,10,[],boss_service_sup,[]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:01 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_service_sup/1
+    pid: <0.206.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 212
+  neighbours:
+2013-09-08 23:16:01 =CRASH REPORT====
+  crasher:
+    initial call: mochiweb_acceptor:init/3
+    pid: <0.208.0>
+    registered_name: []
+    exception exit: {{{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},{gen_server,call,[boss_web,get_all_applications]}},[{gen_server,call,2,[{file,"gen_server.erl"},{line,180}]},{boss_web_controller,handle_request,3,[{file,"src/boss/boss_web_controller.erl"},{line,409}]},{mochiweb_http,headers,5,[{file,"src/mochiweb_http.erl"},{line,94}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [mochiweb_http,boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: [#Port<0.11976>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 2586
+    stack_size: 27
+    reductions: 1412
+  neighbours:
+2013-09-08 23:16:01 =ERROR REPORT====
+** Generic server boss_db_sup terminating 
+** Last message in was {'EXIT',<0.163.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{local,boss_db_sup},one_for_one,[{child,<0.168.0>,db_controller,{poolboy,start_link,[[{name,{local,boss_db_pool}},{worker_module,boss_db_controller},{size,5},{max_overflow,10},{adapter,mock},{cache_enable,false},{shards,[]},{is_master_node,true},{db_host,"localhost"},{db_port,1978}]]},permanent,2000,worker,[poolboy]}],undefined,10,10,[],boss_db_sup,[{adapter,mock},{cache_enable,false},{shards,[]},{is_master_node,true},{db_host,"localhost"},{db_port,1978}]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:01 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_db_sup/1
+    pid: <0.167.0>
+    registered_name: boss_db_sup
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 286
+  neighbours:
+2013-09-08 23:16:01 =ERROR REPORT====
+** Generic server boss_db_mock_sup terminating 
+** Last message in was {'EXIT',<0.163.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{global,boss_db_mock_sup},one_for_one,[{child,<0.166.0>,db_mock_controller,{boss_db_mock_controller,start_link,[[]]},permanent,2000,worker,[boss_db_mock_controller]}],undefined,10,10,[],boss_db_mock_sup,[]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:01 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_db_mock_sup/1
+    pid: <0.165.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 296
+  neighbours:
+2013-09-08 23:16:01 =ERROR REPORT====
+** Generic server boss_session_sup terminating 
+** Last message in was {'EXIT',<0.163.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{local,boss_session_sup},one_for_one,[{child,<0.178.0>,session_controller,{poolboy,start_link,[[{name,{local,boss_session_pool}},{worker_module,boss_session_controller},{size,20},{max_overflow,40},{adapter,boss_session_adapter_mock},{session_exp_time,525600},{session_key,"_boss_session"}]]},permanent,2000,worker,[poolboy]}],undefined,10,10,[],boss_session_sup,[{adapter,boss_session_adapter_mock},{session_exp_time,525600},{session_key,"_boss_session"}]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:01 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_session_sup/1
+    pid: <0.177.0>
+    registered_name: boss_session_sup
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 290
+  neighbours:
+2013-09-08 23:16:01 =ERROR REPORT====
+** Generic server boss_news_sup terminating 
+** Last message in was {'EXIT',<0.163.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{global,boss_news_sup},one_for_one,[{child,<0.203.0>,news_controller,{boss_news_controller,start_link,[[]]},permanent,2000,worker,[boss_news_controller]}],undefined,10,10,[],boss_news_sup,[]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:01 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_news_sup/1
+    pid: <0.202.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 312
+  neighbours:
+2013-09-08 23:16:02 =ERROR REPORT====
+** Generic server boss_mq_sup terminating 
+** Last message in was {'EXIT',<0.163.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{global,boss_mq_sup},one_for_one,[{child,<0.201.0>,mq_controller,{boss_mq_controller,start_link,[[{adapter,boss_mq_adapter_tinymq}]]},permanent,2000,worker,[boss_mq_controller]}],undefined,10,10,[],boss_mq_sup,[{adapter,boss_mq_adapter_tinymq}]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:02 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_mq_sup/1
+    pid: <0.200.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 321
+  neighbours:
+2013-09-08 23:16:02 =ERROR REPORT====
+** Generic server boss_session_mock_sup terminating 
+** Last message in was {'EXIT',<0.163.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{global,boss_session_mock_sup},one_for_one,[{child,<0.176.0>,session_mock_controller,{boss_session_mock_controller,start_link,[[]]},permanent,2000,worker,[boss_session_mock_controller]}],undefined,10,10,[],boss_session_mock_sup,[]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:02 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_session_mock_sup/1
+    pid: <0.175.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 328
+  neighbours:
+2013-09-08 23:16:02 =ERROR REPORT====
+** Generic server <0.227.0> terminating 
+** Last message in was {'EXIT',<0.163.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{<0.227.0>,boss_translator_sup},one_for_one,[{child,<0.228.0>,translator_controller,{boss_translator_controller,start_link,[[{application,cb_tutorial}]]},permanent,2000,worker,[boss_translator_controller]}],undefined,10,10,[],boss_translator_sup,[{application,cb_tutorial}]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:02 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_translator_sup/1
+    pid: <0.227.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 334
+  neighbours:
+2013-09-08 23:16:02 =ERROR REPORT====
+** Generic server <0.224.0> terminating 
+** Last message in was {'EXIT',<0.163.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{<0.224.0>,boss_router_sup},one_for_one,[{child,<0.225.0>,router_controller,{boss_router_controller,start_link,[[{application,cb_tutorial},{controllers,["cb_tutorial_greeting_controller"]}]]},permanent,2000,worker,[boss_router_controller]}],undefined,10,10,[],boss_router_sup,[{application,cb_tutorial},{controllers,["cb_tutorial_greeting_controller"]}]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:02 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_router_sup/1
+    pid: <0.224.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 341
+  neighbours:
+2013-09-08 23:16:02 =ERROR REPORT====
+** Generic server boss_mail_sup terminating 
+** Last message in was {'EXIT',<0.163.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{local,boss_mail_sup},one_for_one,[{child,<0.205.0>,mail_controller,{boss_mail_controller,start_link,[[{driver,boss_mail_driver_smtp}]]},permanent,2000,worker,[boss_mail_controller]}],undefined,10,10,[],boss_mail_sup,[{driver,boss_mail_driver_smtp}]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:02 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_mail_sup/1
+    pid: <0.204.0>
+    registered_name: boss_mail_sup
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 344
+  neighbours:
+2013-09-08 23:16:02 =SUPERVISOR REPORT====
+     Supervisor: {<0.179.0>,poolboy_sup}
+     Context:    shutdown_error
+     Reason:     shutdown
+     Offender:   [{nb_children,20},{name,boss_session_controller},{mfargs,{boss_session_controller,start_link,[[{size,20},{max_overflow,40},{adapter,boss_session_adapter_mock},{session_exp_time,525600},{session_key,"_boss_session"}]]}},{restart_type,temporary},{shutdown,brutal_kill},{child_type,worker}]
+
+2013-09-08 23:16:02 =ERROR REPORT====
+** Generic server boss_web terminating 
+** Last message in was timeout
+** When Server state == {state,[],<0.282.0>,{ok,<0.283.0>},undefined,true}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:02 =CRASH REPORT====
+  crasher:
+    initial call: boss_web_controller:init/1
+    pid: <0.239.0>
+    registered_name: boss_web
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_sup,<0.65.0>]
+    messages: []
+    links: [<0.280.0>,<0.300.0>,<0.303.0>,<0.282.0>,<0.251.0>,<0.276.0>,<0.278.0>,<0.253.0>,<0.241.0>,<0.243.0>,<0.66.0>]
+    dictionary: [{random_seed,{21146,24633,12399}},{boss_environment,development}]
+    trap_exit: false
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 173786
+  neighbours:
+2013-09-08 23:16:02 =SUPERVISOR REPORT====
+     Supervisor: {local,boss_sup}
+     Context:    child_terminated
+     Reason:     {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+     Offender:   [{pid,<0.239.0>},{name,boss_web_controller},{mfargs,{boss_web_controller,start_link,[[{ip,"0.0.0.0"},{port,8001}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2013-09-08 23:16:02 =ERROR REPORT====
+** Generic server boss_service_sup terminating 
+** Last message in was {'EXIT',<0.239.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{global,boss_service_sup},one_for_all,[],undefined,10,10,[],boss_service_sup,[]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:02 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_service_sup/1
+    pid: <0.282.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 212
+  neighbours:
+2013-09-08 23:16:02 =ERROR REPORT====
+** Generic server boss_db_sup terminating 
+** Last message in was {'EXIT',<0.239.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{local,boss_db_sup},one_for_one,[{child,<0.244.0>,db_controller,{poolboy,start_link,[[{name,{local,boss_db_pool}},{worker_module,boss_db_controller},{size,5},{max_overflow,10},{adapter,mock},{cache_enable,false},{shards,[]},{is_master_node,true},{db_host,"localhost"},{db_port,1978}]]},permanent,2000,worker,[poolboy]}],undefined,10,10,[],boss_db_sup,[{adapter,mock},{cache_enable,false},{shards,[]},{is_master_node,true},{db_host,"localhost"},{db_port,1978}]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:02 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_db_sup/1
+    pid: <0.243.0>
+    registered_name: boss_db_sup
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 282
+  neighbours:
+2013-09-08 23:16:02 =ERROR REPORT====
+** Generic server boss_db_mock_sup terminating 
+** Last message in was {'EXIT',<0.239.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{global,boss_db_mock_sup},one_for_one,[{child,<0.242.0>,db_mock_controller,{boss_db_mock_controller,start_link,[[]]},permanent,2000,worker,[boss_db_mock_controller]}],undefined,10,10,[],boss_db_mock_sup,[]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:02 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_db_mock_sup/1
+    pid: <0.241.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 292
+  neighbours:
+2013-09-08 23:16:02 =ERROR REPORT====
+** Generic server boss_session_sup terminating 
+** Last message in was {'EXIT',<0.239.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{local,boss_session_sup},one_for_one,[{child,<0.254.0>,session_controller,{poolboy,start_link,[[{name,{local,boss_session_pool}},{worker_module,boss_session_controller},{size,20},{max_overflow,40},{adapter,boss_session_adapter_mock},{session_exp_time,525600},{session_key,"_boss_session"}]]},permanent,2000,worker,[poolboy]}],undefined,10,10,[],boss_session_sup,[{adapter,boss_session_adapter_mock},{session_exp_time,525600},{session_key,"_boss_session"}]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:02 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_session_sup/1
+    pid: <0.253.0>
+    registered_name: boss_session_sup
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 286
+  neighbours:
+2013-09-08 23:16:02 =ERROR REPORT====
+** Generic server boss_news_sup terminating 
+** Last message in was {'EXIT',<0.239.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{global,boss_news_sup},one_for_one,[{child,<0.279.0>,news_controller,{boss_news_controller,start_link,[[]]},permanent,2000,worker,[boss_news_controller]}],undefined,10,10,[],boss_news_sup,[]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:02 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_news_sup/1
+    pid: <0.278.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 308
+  neighbours:
+2013-09-08 23:16:02 =ERROR REPORT====
+** Generic server boss_mq_sup terminating 
+** Last message in was {'EXIT',<0.239.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{global,boss_mq_sup},one_for_one,[{child,<0.277.0>,mq_controller,{boss_mq_controller,start_link,[[{adapter,boss_mq_adapter_tinymq}]]},permanent,2000,worker,[boss_mq_controller]}],undefined,10,10,[],boss_mq_sup,[{adapter,boss_mq_adapter_tinymq}]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:02 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_mq_sup/1
+    pid: <0.276.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 317
+  neighbours:
+2013-09-08 23:16:02 =ERROR REPORT====
+** Generic server boss_session_mock_sup terminating 
+** Last message in was {'EXIT',<0.239.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{global,boss_session_mock_sup},one_for_one,[{child,<0.252.0>,session_mock_controller,{boss_session_mock_controller,start_link,[[]]},permanent,2000,worker,[boss_session_mock_controller]}],undefined,10,10,[],boss_session_mock_sup,[]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:02 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_session_mock_sup/1
+    pid: <0.251.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 324
+  neighbours:
+2013-09-08 23:16:02 =ERROR REPORT====
+** Generic server <0.303.0> terminating 
+** Last message in was {'EXIT',<0.239.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{<0.303.0>,boss_translator_sup},one_for_one,[{child,<0.304.0>,translator_controller,{boss_translator_controller,start_link,[[{application,cb_tutorial}]]},permanent,2000,worker,[boss_translator_controller]}],undefined,10,10,[],boss_translator_sup,[{application,cb_tutorial}]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:03 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_translator_sup/1
+    pid: <0.303.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 330
+  neighbours:
+2013-09-08 23:16:03 =ERROR REPORT====
+** Generic server <0.300.0> terminating 
+** Last message in was {'EXIT',<0.239.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{<0.300.0>,boss_router_sup},one_for_one,[{child,<0.301.0>,router_controller,{boss_router_controller,start_link,[[{application,cb_tutorial},{controllers,["cb_tutorial_greeting_controller"]}]]},permanent,2000,worker,[boss_router_controller]}],undefined,10,10,[],boss_router_sup,[{application,cb_tutorial},{controllers,["cb_tutorial_greeting_controller"]}]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:03 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_router_sup/1
+    pid: <0.300.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 337
+  neighbours:
+2013-09-08 23:16:03 =ERROR REPORT====
+** Generic server boss_mail_sup terminating 
+** Last message in was {'EXIT',<0.239.0>,{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}}
+** When Server state == {state,{local,boss_mail_sup},one_for_one,[{child,<0.281.0>,mail_controller,{boss_mail_controller,start_link,[[{driver,boss_mail_driver_smtp}]]},permanent,2000,worker,[boss_mail_controller]}],undefined,10,10,[],boss_mail_sup,[{driver,boss_mail_driver_smtp}]}
+** Reason for termination == 
+** {{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]}
+2013-09-08 23:16:03 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:boss_mail_sup/1
+    pid: <0.280.0>
+    registered_name: boss_mail_sup
+    exception exit: {{{badmatch,{error,{"src/view/greeting/create.html",[{{11,4},erlydtl_parser,["syntax error before: ",["\"endblock\""]]}]}}},[{boss_load,'-load_views/3-fun-0-',5,[{file,"src/boss/boss_load.erl"},{line,286}]},{lists,foldr,3,[{file,"lists.erl"},{line,1261}]},{boss_load,load_views,3,[{file,"src/boss/boss_load.erl"},{line,283}]},{boss_load,load_all_modules,3,[{file,"src/boss/boss_load.erl"},{line,33}]},{boss_web_controller,'-handle_info/2-fun-0-',2,[{file,"src/boss/boss_web_controller.erl"},{line,205}]},{lists,map,2,[{file,"lists.erl"},{line,1224}]},{boss_web_controller,handle_info,2,[{file,"src/boss/boss_web_controller.erl"},{line,175}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,604}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,744}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [boss_web,boss_sup,<0.65.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 340
+  neighbours:
+2013-09-08 23:16:03 =SUPERVISOR REPORT====
+     Supervisor: {<0.255.0>,poolboy_sup}
+     Context:    shutdown_error
+     Reason:     shutdown
+     Offender:   [{nb_children,20},{name,boss_session_controller},{mfargs,{boss_session_controller,start_link,[[{size,20},{max_overflow,40},{adapter,boss_session_adapter_mock},{session_exp_time,525600},{session_key,"_boss_session"}]]}},{restart_type,temporary},{shutdown,brutal_kill},{child_type,worker}]
+
