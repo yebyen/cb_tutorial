@@ -19,3 +19,7 @@ create('POST', []) ->
 goodbye('POST', []) ->
   boss_db:delete(Req:post_param("greeting_id")),
   {redirect, [{action, "list"}]}.
+send_test_message('GET', []) ->
+  TestMessage = "Free at last!",
+  boss_mq:push("test-channel", TestMessage),
+  {output, TestMessage}.
