@@ -19,3 +19,10 @@ create('POST', []) ->
 goodbye('POST', []) ->
   boss_db:delete(Req:post_param("greeting_id")),
   {redirect, [{action, "list"}]}.
+pull('GET', [LastTimestamp]) ->
+  {ok, Timestamp, Greetings} = boss_mq:pull("new-greetings", list_to_integer(LastTimestamp)),
+  {json, [{timestamp, Timestamp}, {greetings, Greetings}]}.
+live('GET', []) ->
+  Greetings = boss_db:find(greeting, []),
+  Timestamp = boss_mq:now("new-greetings"),
+  {ok, [{greetings, Greetings}, {timestamp, Timestamp}]}.
